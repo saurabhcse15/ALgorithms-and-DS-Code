@@ -1,4 +1,5 @@
-int minPrime[num + 1];
+#define num 1000000         //depends on array limit
+int minPrime[num + 1];      //global
 void seive(){
     for (int i = 2; i * i <= num; ++i) {
         if (minPrime[i] == 0) { //if i is prime
@@ -17,7 +18,7 @@ void seive(){
 }
 void primefactor(int n) {
     while (n != 1) {
-        //res.push_back(minPrime[n]);
+        //res.push_back(minPrime[n]);       //can store the result or print it
         cout<<minPrime[n]<<endl;
         n /= minPrime[n];
     }
